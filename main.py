@@ -34,10 +34,7 @@ def launch_app():
 @ask.intent("OnIntent")
 
 def turn_on():
-    
-    #global sw
-    #time.sleep(2)
-    
+
 	sess = requests.Session()
 
 	url = 'http://castillolk.com.ve/proyectos/sms/alexa.php?'
@@ -46,7 +43,6 @@ def turn_on():
      
 	print data.content
 
-    #if sw == '7':
 	if 'ON' in data.content:
 
 	    turn_on_msg = "System is already turned on. Not action taken."
@@ -77,9 +73,6 @@ def turn_on():
 @ask.intent("OffIntent")
 
 def turn_off():
-    
-    #global sw
-    #time.sleep(2)
 
 	sess = requests.Session()
 
@@ -89,7 +82,6 @@ def turn_off():
      
 	print data.content
 
-    #if sw == '8':
 	if 'OFF' in data.content:
 
 	    turn_off_msg = "System is already turned off. Not action taken."
