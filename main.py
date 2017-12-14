@@ -104,7 +104,6 @@ def turn_off():
 
         turn_on_msg = "Turning system OFF... It might take a few seconds, please wait."
 
-        #sw = '8'
         print(turn_on_msg)
      
         return statement(turn_on_msg)
