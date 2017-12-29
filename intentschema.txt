@@ -5,6 +5,12 @@
     },
     {
       "intent": "OffIntent"
+    },
+    {
+      "intent": "TemperatureIntent"
+    },
+    {
+      "intent": "HumidityIntent"
     }
   ]
 }

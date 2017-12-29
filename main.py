@@ -109,6 +109,46 @@ def turn_off():
         return statement(turn_on_msg)
     
 
+@ask.intent("TemperatureIntent")
+
+def get_temperature():
+	sess = requests.Session()
+
+	url = 'https://phpcourse.000webhostapp.com/temperature.txt'
+
+	data = sess.get(url)
+     
+	print data.content
+     
+	print "next line is temperature"
+    
+	temperature_msg = "Temperature value is: " + data.content + " Celsius degrees"
+
+    #return statement(data.content)
+	return statement(temperature_msg)
+
+@ask.intent("HumidityIntent")
+
+def get_humidity():
+	sess = requests.Session()
+
+	url = 'https://phpcourse.000webhostapp.com/humidity.txt'
+
+	data = sess.get(url)
+     
+	print data.content
+     
+	print "next line is humidity"
+    
+	humidity_msg = "Humidity value is: " + data.content + " Percentage"
+
+    #return statement(data.content)
+	return statement(humidity_msg)
+
+
+
+
+
 if __name__ == '__main__':
 
     app.run(debug=True, host='0.0.0.0')
